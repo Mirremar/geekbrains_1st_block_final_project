@@ -13,3 +13,19 @@
     return strArray;
 }
 
+string[] TransformData(string[] input)
+{
+    string concatenated = String.Empty;
+    string[] result = new string[input.Length];
+    for (int i = 0; i < input.Length; i++)
+    {
+        if (input[i].Length <= 3)
+        {
+            concatenated += (input[i] + " ");
+        }
+    }
+    result = concatenated.TrimEnd().Split(" ");
+    return result;
+}
+
+
