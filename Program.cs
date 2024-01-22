@@ -28,4 +28,22 @@ string[] TransformData(string[] input)
     return result;
 }
 
+void PrintResult(string[] result)
+{
+    for (int i=0;i<result.Length;i++)
+    {
+        if (i == result.Length - 1)
+        {
+            Console.Write(result[i]);
+        }
+        else
+        {
+            Console.Write(result[i] + " ");
+        }
+    }
+}
 
+string[] testArray = ReadData();
+string[] result = TransformData(testArray);
+PrintResult(result);
+Console.ReadLine();
